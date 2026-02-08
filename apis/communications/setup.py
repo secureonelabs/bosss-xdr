@@ -17,7 +17,7 @@ setup(
     name='comms_api',
     version='5.0.0',
     description='Communications API',
-    author_email='hello@wazuh.com',
+    author_email='hello@secureonelabs.com',
     author='Wazuh',
     url='https://github.com/wazuh',
     keywords=['Communications API', 'Comms API'],

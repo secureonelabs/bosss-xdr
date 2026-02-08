@@ -28,7 +28,7 @@ test_data_path = os.path.join(test_path, 'data')
 security_conf = WazuhResult({'auth_token_exp_timeout': 900, 'rbac_mode': 'black'})
 decoded_payload = {
     'iss': 'wazuh',
-    'aud': 'Wazuh API REST',
+    'aud': 'BOSSS XDR API REST',
     'nbf': 0,
     'exp': security_conf['auth_token_exp_timeout'],
     'sub': '001',
@@ -39,7 +39,7 @@ decoded_payload = {
 
 original_payload = {
     'iss': 'wazuh',
-    'aud': 'Wazuh API REST',
+    'aud': 'BOSSS XDR API REST',
     'nbf': 0,
     'exp': security_conf['auth_token_exp_timeout'],
     'sub': '001',
@@ -186,7 +186,7 @@ async def test_decode_token(mock_raise_if_exc, mock_distribute_function, mock_da
     mock_dapi.assert_has_calls(calls)
     mock_get_keypair.assert_called_once()
     mock_decode.assert_called_once_with(
-        'test_token', '-----BEGIN PUBLIC KEY-----', algorithms=['RS256'], audience='Wazuh API REST'
+        'test_token', '-----BEGIN PUBLIC KEY-----', algorithms=['RS256'], audience='BOSSS XDR API REST'
     )
     assert mock_distribute_function.call_count == 2
     assert mock_raise_if_exc.call_count == 2

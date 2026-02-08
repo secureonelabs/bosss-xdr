@@ -1,4 +1,4 @@
-# Makefile for Wazuh APIs
+# Makefile for BOSSS XDR APIs
 # Copyright (C) 2015, Wazuh Inc.
 # May 3, 2017
 #

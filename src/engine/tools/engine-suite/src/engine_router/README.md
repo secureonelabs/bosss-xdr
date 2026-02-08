@@ -40,7 +40,7 @@ options:
   -h, --help            show this help message and exit
   --version             show program's version number and exit
   --api-socket API_SOCKET
-                        Path to the Wazuh API socket
+                        Path to the BOSSS XDR API socket
 
 subcommands:
   {get,delete,add,reload,update,list,ingest,eps-get,eps-enable,eps-disable,eps-update}

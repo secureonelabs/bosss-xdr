@@ -9,7 +9,7 @@ type: integration
 
 brief: These tests will check if the 'rbac_mode' (Role-Based Access Control) setting of the API
        is working properly. This setting allows you to specify the operating mode between
-       'whitelist mode' and 'blacklist mode'. The Wazuh API is an open source 'RESTful' API
+       'whitelist mode' and 'blacklist mode'. The BOSSS XDR API is an open source 'RESTful' API
        that allows for interaction with the Wazuh manager from a web browser, command line tool
        like 'cURL' or any script or program that can make web requests.
 
@@ -123,7 +123,7 @@ def test_rbac_mode(test_configuration, test_metadata, add_configuration, add_use
             brief: Metadata from the test case.
         - add_configuration:
             type: fixture
-            brief: Add configuration to the Wazuh API configuration files.
+            brief: Add configuration to the BOSSS XDR API configuration files.
         - add_user_in_rbac:
             type: fixture
             brief: Add a new user in the RBAC database.

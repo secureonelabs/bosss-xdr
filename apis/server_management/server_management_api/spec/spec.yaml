@@ -1,14 +1,14 @@
 openapi: '3.0.0'
 info:
   description: |
-    The Wazuh API is an open-source RESTful API that allows for interaction with the Wazuh manager from a web browser,
+    The BOSSS XDR API is an open-source RESTful API that allows for interaction with the Wazuh manager from a web browser,
     command line tools like cURL or any script or program that can make web requests. The Wazuh WUI relies on this
     heavily and Wazuh’s goal is to accommodate complete remote management of the Wazuh infrastructure via the Wazuh WUI.
-    Use the Wazuh API to easily perform everyday actions like adding an agent or restarting the agent(s).
+    Use the BOSSS XDR API to easily perform everyday actions like adding an agent or restarting the agent(s).
 
     # Authentication
 
-    Wazuh API endpoints require authentication to be used. Therefore, all calls must include a JSON Web Token.
+    BOSSS XDR API endpoints require authentication to be used. Therefore, all calls must include a JSON Web Token.
     JWT is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting
     information between parties as a JSON object. Perform a call with `basicAuth` to `POST /security/user/authenticate`
     and obtain a JWT token to run any endpoint.
@@ -1358,7 +1358,7 @@ components:
 
 tags:
   - name: API Info
-    description: "Wazuh API information"
+    description: "BOSSS XDR API information"
   - name: Agents
     description: "Agents management related operations"
   - name: Groups
@@ -1396,7 +1396,7 @@ paths:
                   data:
                     $ref: '#/components/schemas/BasicInfo'
               example:
-                title: "Wazuh API"
+                title: "BOSSS XDR API"
                 api_version: "v4.5.0"
                 revision: 'alpha0'
                 license_name: "GPL 2.0"
@@ -2339,5 +2339,5 @@ paths:
 
 
 externalDocs:
-  description: "Learn more about the Wazuh API"
+  description: "Learn more about the BOSSS XDR API"
   url: 'https://documentation.wazuh.com/5.0/user-manual/api/index.html'

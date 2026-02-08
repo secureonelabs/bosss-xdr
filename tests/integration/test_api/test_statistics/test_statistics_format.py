@@ -8,7 +8,7 @@ copyright: Copyright (C) 2015-2024, Wazuh Inc.
 type: integration
 
 brief: These tests will check if the stats can be obtained from the API and if they follow the expected schema.
-       The Wazuh API is an open source 'RESTful' API that allows for interaction with the Wazuh manager from
+       The BOSSS XDR API is an open source 'RESTful' API that allows for interaction with the Wazuh manager from
        a web browser, command line tool like 'cURL' or any script or program that can make web requests.
 
 components:

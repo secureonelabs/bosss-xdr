@@ -14,7 +14,7 @@ from server_management_api.models.base_model_ import Model
 
 
 class WazuhAPIJSONEncoder(JSONEncoder):
-    """Define the custom Wazuh API JSON encoder class."""
+    """Define the custom BOSSS XDR API JSON encoder class."""
 
     include_nulls = False
 

@@ -90,7 +90,7 @@ async def access_log(request: ConnexionRequest, response: Response, prev_time: t
                     user_passw,
                     public_key,
                     algorithms=[JWT_ALGORITHM],
-                    audience='Wazuh API REST',
+                    audience='BOSSS XDR API REST',
                     options={'verify_exp': False},
                 )
                 user = s['sub']

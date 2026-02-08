@@ -18,7 +18,7 @@ class WazuhException(Exception):
     ERRORS = {
         # < 999: API
         900: 'One of the API child processes terminated abruptly. The API process pool is not usable anymore. '
-        'Please restart the Wazuh API',
+        'Please restart the BOSSS XDR API',
         901: 'API executor subprocess broke. A service restart may be needed',
         902: 'API Endpoint only available on master node',
         # Wazuh: 0999 - 1099
@@ -647,7 +647,7 @@ class WazuhClusterError(WazuhInternalError):
     """Cluster exception."""
 
     _default_type = 'about:blank'
-    _default_title = 'Wazuh Cluster Error'
+    _default_title = 'BOSSS XDR Cluster Error'
 
 
 class WazuhHAPHelperError(WazuhClusterError):
@@ -675,7 +675,7 @@ class WazuhIndexerError(WazuhInternalError):
     """Indexer client exception."""
 
     _default_type = 'about:blank'
-    _default_title = 'Wazuh Indexer Error'
+    _default_title = 'BOSSS XDR Indexer Error'
 
 
 class WazuhDaemonError(WazuhInternalError):

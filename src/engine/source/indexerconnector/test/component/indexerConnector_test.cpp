@@ -1,5 +1,5 @@
 /*
- * Wazuh Indexer Connector - Component tests
+ * BOSSS XDR Indexer Connector - Component tests
  * Copyright (C) 2015, Wazuh Inc.
  * January 09, 2024.
  *

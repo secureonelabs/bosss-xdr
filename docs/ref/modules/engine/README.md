@@ -399,7 +399,7 @@ sources or applications.
 
 ### Security enrichment process
 The analysis process evaluates all event fields to identify potential security concerns, which are represented as threat
-indicators within the common schema. These indicators are later stored in the Wazuh Indexer, where they can be used for
+indicators within the common schema. These indicators are later stored in the BOSSS XDR Indexer, where they can be used for
 threat hunting and detecting security issues.
 
 All decoded events pass through the analysis pipeline, starting with the root rule. The root rule determines the next
@@ -1219,7 +1219,7 @@ Key Components:
   - Field choices (choosing between multiple fields)
 - Wildcards: Capture patterns without mapping data to fields.
 - Optional Groups: Make subexpressions optional for flexible parsing.
-- Schema Parsers: Automatically applied when a field of a known type is used, ensuring compatibility with Wazuh Indexer.
+- Schema Parsers: Automatically applied when a field of a known type is used, ensuring compatibility with BOSSS XDR Indexer.
 
 Example:
 This expression captures an IP or hostname into `client.ip` or `client.address` and, if present, captures a port into `server.port`:
@@ -1320,7 +1320,7 @@ kanban
     - `version` (array): A list of versions for which the logs have been tested and supported. I.e., `2.2.x`, `3.x`, etc.
     - `author` (object): The author of the decoder, ie:
         ```yaml
-        name: Wazuh, Inc.
+        name: SecureOneLabs
         email: info@wazuh.com
         url: https://wazuh.com
         date: 2022-11-15
@@ -1683,7 +1683,7 @@ These parsers are used automatically when a field of its type is used in a logpa
 
 For example, if you use the field `<event.start>` which is of type `date`, it will be parsed automatically by the date parser.
 
-These parsers will generate fields which are type-compatible with Wazuh Indexer.
+These parsers will generate fields which are type-compatible with BOSSS XDR Indexer.
 
 | Type        | Parser       | Description                                                                                          |
 |-------------|--------------|------------------------------------------------------------------------------------------------------|

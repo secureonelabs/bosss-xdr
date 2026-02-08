@@ -79,7 +79,7 @@ All notable changes to this project will be documented in this file.
 ### RESTful API
 
 #### Added
-- Added support in the Wazuh API to parse `journald` configurations from the `ossec.conf` file. ([#23094](https://github.com/wazuh/wazuh/pull/23094))
+- Added support in the BOSSS XDR API to parse `journald` configurations from the `ossec.conf` file. ([#23094](https://github.com/wazuh/wazuh/pull/23094))
 - Added user-agent to the CTI service request. ([#24360](https://github.com/wazuh/wazuh/pull/24360))
 
 #### Changed
@@ -88,7 +88,7 @@ All notable changes to this project will be documented in this file.
 - Removed the hardcoded fields returned by the `GET /agents/outdated` endpoint and added the select parameter to the specification. ([#22388](https://github.com/wazuh/wazuh/pull/22388))
 - Updated the regex used to validate CDB lists. ([#22423](https://github.com/wazuh/wazuh/pull/22423))
 - Changed the default value for empty fields in the `GET /agents/stats/distinct` endpoint response. ([#22413](https://github.com/wazuh/wazuh/pull/22413))
-- Changed the Wazuh API endpoint responses when receiving the `Expect` header. ([#22380](https://github.com/wazuh/wazuh/pull/22380))
+- Changed the BOSSS XDR API endpoint responses when receiving the `Expect` header. ([#22380](https://github.com/wazuh/wazuh/pull/22380))
 - Enhanced Authorization header values decoding errors to avoid showing the stack trace and fail gracefully. ([#22745](https://github.com/wazuh/wazuh/pull/22745))
 - Updated the format of the fields that can be N/A in the API specification. ([#22908](https://github.com/wazuh/wazuh/pull/22908))
 - Updated the WAZUH API specification to conform with the current endpoint requests and responses. ([#22954](https://github.com/wazuh/wazuh/pull/22954))
@@ -102,7 +102,7 @@ All notable changes to this project will be documented in this file.
 - Fixed bug in `GET /groups`. ([#22428](https://github.com/wazuh/wazuh/pull/22428))
 
 #### Removed
-- Removed the `cache` configuration option from the Wazuh API. ([#22416](https://github.com/wazuh/wazuh/pull/22416))
+- Removed the `cache` configuration option from the BOSSS XDR API. ([#22416](https://github.com/wazuh/wazuh/pull/22416))
 
 ### Ruleset
 
@@ -503,7 +503,7 @@ All notable changes to this project will be documented in this file.
 #### Added
 
 - wazuh-authd can now generate X509 certificates. ([#13559](https://github.com/wazuh/wazuh/pull/13559))
-- Introduced a new CLI to manage features related to the Wazuh API RBAC resources. ([#13797](https://github.com/wazuh/wazuh/pull/13797))
+- Introduced a new CLI to manage features related to the BOSSS XDR API RBAC resources. ([#13797](https://github.com/wazuh/wazuh/pull/13797))
 - Added support for Amazon Linux 2022 in Vulnerability Detector. ([#13034](https://github.com/wazuh/wazuh/issue/13034))
 - Added support for Alma Linux in Vulnerability Detector. ([#16343](https://github.com/wazuh/wazuh/pull/16343))
 - Added support for Debian 12 in Vulnerability Detector. ([#18542](https://github.com/wazuh/wazuh/pull/18542))
@@ -1079,7 +1079,7 @@ All notable changes to this project will be documented in this file.
 - Added support for the use of the Azure integration module in Linux agents. ([#10870](https://github.com/wazuh/wazuh/pull/10870))
 - Added new error messages when using invalid credentials with the Azure integration. ([#11852](https://github.com/wazuh/wazuh/pull/11852))
 - Added reparse option to CloudWatchLogs and Google Cloud Storage integrations.  ([#12515](https://github.com/wazuh/wazuh/pull/12515))
-- Wazuh Agent can now be built and run on Alpine Linux. ([#14726](https://github.com/wazuh/wazuh/pull/14726))
+- BOSSS XDR Agent can now be built and run on Alpine Linux. ([#14726](https://github.com/wazuh/wazuh/pull/14726))
 - Added native Shuffle integration. ([#15054](https://github.com/wazuh/wazuh/pull/15054))
 
 #### Changed
@@ -1097,7 +1097,7 @@ All notable changes to this project will be documented in this file.
 - The last_dates.json file of the Azure module has been deprecated in favour of a new ORM and database. ([12849](https://github.com/wazuh/wazuh/pull/12849/))
 - Improved the error handling in AWS integration's `decompress_file` method. ([#12929](https://github.com/wazuh/wazuh/pull/12929))
 - Use zlib for zip compression in cluster synchronization. ([#11190](https://github.com/wazuh/wazuh/pull/11190))
-- The exception handling on Wazuh Agent for Windows has been changed to DWARF2. ([#11354](https://github.com/wazuh/wazuh/pull/11354))
+- The exception handling on BOSSS XDR Agent for Windows has been changed to DWARF2. ([#11354](https://github.com/wazuh/wazuh/pull/11354))
 - The root CA certificate for WPK upgrade has been updated. ([#14696](https://github.com/wazuh/wazuh/pull/14696))
 - Agents on macOS now report the OS name as "macOS" instead of "Mac OS X". ([#14822](https://github.com/wazuh/wazuh/pull/14822))
 - The Systemd service stopping policy has been updated. ([#14816](https://github.com/wazuh/wazuh/pull/14816))
@@ -1152,7 +1152,7 @@ All notable changes to this project will be documented in this file.
 - Added integration tests for IPv6 agent's registration. ([#12029](https://github.com/wazuh/wazuh/pull/12029))
 - Enable ordering by Agents count in `/groups` endpoints. ([#12887](https://github.com/wazuh/wazuh/pull/12887))
 - Added hash to API logs to identify users logged in with authorization context. ([#12092](https://github.com/wazuh/wazuh/pull/12092))
-- Added new `limits` section to the `upload_wazuh_configuration` section in the Wazuh API configuration. ([#14119](https://github.com/wazuh/wazuh/pull/14119))
+- Added new `limits` section to the `upload_wazuh_configuration` section in the BOSSS XDR API configuration. ([#14119](https://github.com/wazuh/wazuh/pull/14119))
 - Added logic to API logger to renew its streams if needed on every request. ([#14295](https://github.com/wazuh/wazuh/pull/14295))
 - Added `GET /manager/daemons/stats` and `GET /cluster/{node_id}/daemons/stats` API endpoints. ([#14401](https://github.com/wazuh/wazuh/pull/14401))
 - Added `GET /agents/{agent_id}/daemons/stats` API endpoint. ([#14464](https://github.com/wazuh/wazuh/pull/14464))
@@ -1861,7 +1861,7 @@ All notable changes to this project will be documented in this file.
 - Fixed `PUT /agents/group/{group_id}/restart` endpoint to exclude exception codes properly. ([#10666](https://github.com/wazuh/wazuh/pull/10666))
 - Fixed agent endpoints `q` parameter to allow more operators when filtering by groups. ([#10656](https://github.com/wazuh/wazuh/pull/10656))
 - Fixed API integration tests related to rule, decoder and task endpoints. ([#10830](https://github.com/wazuh/wazuh/pull/10830))
-- Improved exceptions handling when starting the Wazuh API service. ([#11411](https://github.com/wazuh/wazuh/pull/11411))
+- Improved exceptions handling when starting the BOSSS XDR API service. ([#11411](https://github.com/wazuh/wazuh/pull/11411))
 - Fixed race condition while creating RBAC database. ([#11598](https://github.com/wazuh/wazuh/pull/11598))
 - Fixed API integration tests failures caused by race conditions. ([#12102](https://github.com/wazuh/wazuh/pull/12102))
 
@@ -2108,11 +2108,11 @@ All notable changes to this project will be documented in this file.
   - Decoders
     - Added support for UFW firewall to decoders. ([#7100](https://github.com/wazuh/wazuh/pull/7100))
     - Added Sophos firewall Decoders ([#7289](https://github.com/wazuh/wazuh/pull/7289))
-    - Added Wazuh API Decoders ([#7289](https://github.com/wazuh/wazuh/pull/7289))
+    - Added BOSSS XDR API Decoders ([#7289](https://github.com/wazuh/wazuh/pull/7289))
     - Added F5 BigIP Decoders. ([#7289](https://github.com/wazuh/wazuh/pull/7289))
   - Rules
     - Added Sophos firewall Rules ([#7289](https://github.com/wazuh/wazuh/pull/7289))
-    - Added Wazuh API Rules ([#7289](https://github.com/wazuh/wazuh/pull/7289))
+    - Added BOSSS XDR API Rules ([#7289](https://github.com/wazuh/wazuh/pull/7289))
     - Added Firewall Rules
     - Added F5 BigIp Rules. ([#7289](https://github.com/wazuh/wazuh/pull/7289))
   - SCA
@@ -2546,7 +2546,7 @@ All notable changes to this project will be documented in this file.
   - Fixed zip files compression and handling in cluster integrity synchronization. ([#6367](https://github.com/wazuh/wazuh/issues/6367))
 - **Core**
   - Fixed version matching when assigning feed in Vulnerability Detector. ([#6505](https://github.com/wazuh/wazuh/pull/6505))
-  - Prevent unprivileged users from accessing the Wazuh Agent folder in Windows. ([#3593](https://github.com/wazuh/wazuh/pull/3593))
+  - Prevent unprivileged users from accessing the BOSSS XDR Agent folder in Windows. ([#3593](https://github.com/wazuh/wazuh/pull/3593))
   - Fix a bug that may lead the agent to crash when reading an invalid Logcollector configuration. ([#6463](https://github.com/wazuh/wazuh/pull/6463))
 
 
@@ -2557,26 +2557,26 @@ All notable changes to this project will be documented in this file.
 - Added **enrollment capability**. Agents are now able to request a key from the manager if current key is missing or wrong. ([#5609](https://github.com/wazuh/wazuh/pull/5609))
 - Migrated the agent-info data to Wazuh DB. ([#5541](https://github.com/wazuh/wazuh/pull/5541))
 - **API:**
-  - Embedded Wazuh API with Wazuh Manager, there is no need to install Wazuh API. ([9860823](https://github.com/wazuh/wazuh/commit/9860823d568f5e6d93550d9b139507c04d2c2eb9))
-  - Migrated Wazuh API server from nodejs to python. ([#2640](https://github.com/wazuh/wazuh/pull/2640))
-  - Added asynchronous aiohttp server for the Wazuh API. ([#4474](https://github.com/wazuh/wazuh/issues/4474))
-  - New Wazuh API is approximately 5 times faster on average. ([#5834](https://github.com/wazuh/wazuh/issues/5834))
-  - Added OpenAPI based Wazuh API specification. ([#2413](https://github.com/wazuh/wazuh/issues/2413))
-  - Improved Wazuh API reference documentation based on OpenAPI spec using redoc. ([#4967](https://github.com/wazuh/wazuh/issues/4967))
-  - Added new yaml Wazuh API configuration file. ([#2570](https://github.com/wazuh/wazuh/issues/2570))
+  - Embedded BOSSS XDR API with BOSSS XDR Manager, there is no need to install BOSSS XDR API. ([9860823](https://github.com/wazuh/wazuh/commit/9860823d568f5e6d93550d9b139507c04d2c2eb9))
+  - Migrated BOSSS XDR API server from nodejs to python. ([#2640](https://github.com/wazuh/wazuh/pull/2640))
+  - Added asynchronous aiohttp server for the BOSSS XDR API. ([#4474](https://github.com/wazuh/wazuh/issues/4474))
+  - New BOSSS XDR API is approximately 5 times faster on average. ([#5834](https://github.com/wazuh/wazuh/issues/5834))
+  - Added OpenAPI based BOSSS XDR API specification. ([#2413](https://github.com/wazuh/wazuh/issues/2413))
+  - Improved BOSSS XDR API reference documentation based on OpenAPI spec using redoc. ([#4967](https://github.com/wazuh/wazuh/issues/4967))
+  - Added new yaml BOSSS XDR API configuration file. ([#2570](https://github.com/wazuh/wazuh/issues/2570))
   - Added new endpoints to manage API configuration and deprecated configure_api.sh. ([#2570](https://github.com/wazuh/wazuh/issues/4822))
-  - Added RBAC support to Wazuh API. ([#3287](https://github.com/wazuh/wazuh/issues/3287))
-  - Added new endpoints for Wazuh API security management. ([#3410](https://github.com/wazuh/wazuh/issues/3410))
+  - Added RBAC support to BOSSS XDR API. ([#3287](https://github.com/wazuh/wazuh/issues/3287))
+  - Added new endpoints for BOSSS XDR API security management. ([#3410](https://github.com/wazuh/wazuh/issues/3410))
   - Added SQLAlchemy ORM based database for RBAC. ([#3375](https://github.com/wazuh/wazuh/issues/3375))
   - Added new JWT authentication method. ([7080ac3](https://github.com/wazuh/wazuh/commit/7080ac352774bb0feaf07cab76df58ea5503ff4b))
-  - Wazuh API up and running by default in all nodes for a clustered environment.
+  - BOSSS XDR API up and running by default in all nodes for a clustered environment.
   - Added new and improved error handling. ([#2843](https://github.com/wazuh/wazuh/issues/2843) ([#5345](https://github.com/wazuh/wazuh/issues/5345))
-  - Added tavern and docker based Wazuh API integration tests. ([#3612](https://github.com/wazuh/wazuh/issues/3612))
-  - Added new and unified Wazuh API responses structure. ([3421015](https://github.com/wazuh/wazuh/commit/34210154016f0a63211a81707744dce0ec0a54f9))
-  - Added new endpoints for Wazuh API users management. ([#3280](https://github.com/wazuh/wazuh/issues/3280))
+  - Added tavern and docker based BOSSS XDR API integration tests. ([#3612](https://github.com/wazuh/wazuh/issues/3612))
+  - Added new and unified BOSSS XDR API responses structure. ([3421015](https://github.com/wazuh/wazuh/commit/34210154016f0a63211a81707744dce0ec0a54f9))
+  - Added new endpoints for BOSSS XDR API users management. ([#3280](https://github.com/wazuh/wazuh/issues/3280))
   - Added new endpoint to restart agents which belong to a node. ([#5381](https://github.com/wazuh/wazuh/issues/5381))
   - Added and improved q filter in several endpoints. ([#5431](https://github.com/wazuh/wazuh/pull/5431))
-  - Tested and improved Wazuh API security. ([#5318](https://github.com/wazuh/wazuh/issues/5318))
+  - Tested and improved BOSSS XDR API security. ([#5318](https://github.com/wazuh/wazuh/issues/5318))
     - Added DDOS blocking system. ([#5318](https://github.com/wazuh/wazuh/issues/5318#issuecomment-654303933))
     - Added brute force attack blocking system. ([#5318](https://github.com/wazuh/wazuh/issues/5318#issuecomment-652892858))
     - Added content-type validation. ([#5318](https://github.com/wazuh/wazuh/issues/5318#issuecomment-654807980))
@@ -2600,7 +2600,7 @@ All notable changes to this project will be documented in this file.
 - Changed the default manager-agent connection protocol to **TCP**. ([#5696](https://github.com/wazuh/wazuh/pull/5696))
 - Disable perpetual connection attempts to modules. ([#5622](https://github.com/wazuh/wazuh/pull/5622))
 - Unified the behaviour of Wazuh daemons when reconnecting with unix sockets. ([#4510](https://github.com/wazuh/wazuh/pull/4510))
-- Changed multiple Wazuh API endpoints. ([#2640](https://github.com/wazuh/wazuh/pull/2640)) ([#2413](https://github.com/wazuh/wazuh-documentation/issues/2413))
+- Changed multiple BOSSS XDR API endpoints. ([#2640](https://github.com/wazuh/wazuh/pull/2640)) ([#2413](https://github.com/wazuh/wazuh-documentation/issues/2413))
 - Refactored framework module in SDK and core. ([#5263](https://github.com/wazuh/wazuh/issues/5263))
 - Refactored FIM Windows events handling. ([#5144](https://github.com/wazuh/wazuh/pull/5144))
 - Changed framework to access global.db using wazuh-db. ([#6095](https://github.com/wazuh/wazuh/pull/6095))
@@ -2644,8 +2644,8 @@ All notable changes to this project will be documented in this file.
 
 ### Removed
 
-- Removed Wazuh API cache endpoints. ([#3042](https://github.com/wazuh/wazuh/pull/3042))
-- Removed Wazuh API rootcheck endpoints. ([#5246](https://github.com/wazuh/wazuh/issues/5246))
+- Removed BOSSS XDR API cache endpoints. ([#3042](https://github.com/wazuh/wazuh/pull/3042))
+- Removed BOSSS XDR API rootcheck endpoints. ([#5246](https://github.com/wazuh/wazuh/issues/5246))
 - Deprecated Debian Jessie and Wheezy for Vulnerability Detector (EOL). ([#5660](https://github.com/wazuh/wazuh/pull/5660))
 - Removed references to `manage_agents` in the installation process. ([#5840](https://github.com/wazuh/wazuh/pull/5840))
 - Removed compatibility with deprecated configuration at Vulnerability Detector. ([#5879](https://github.com/wazuh/wazuh/pull/5879))
@@ -2930,7 +2930,7 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- Fix error after removing a high volume of agents from a group using the Wazuh API. ([#3907](https://github.com/wazuh/wazuh/issues/3907))
+- Fix error after removing a high volume of agents from a group using the BOSSS XDR API. ([#3907](https://github.com/wazuh/wazuh/issues/3907))
 - Fix error in Remoted when reloading agent keys (busy resource). ([#3988](https://github.com/wazuh/wazuh/issues/3988))
 - Fix invalid read in Remoted counters. ([#3989](https://github.com/wazuh/wazuh/issues/3989))
 

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "engine-helper-test"
 version = "1.0.0.dev0"
-authors = [{ name = "Wazuh, Inc." }]
+authors = [{ name = "SecureOneLabs" }]
 description = "A tool that allows you to generate automatic test cases for the helper functions"
 requires-python = ">=3.8"
 classifiers = ["Programming Language :: Python :: 3"]

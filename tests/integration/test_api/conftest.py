@@ -15,7 +15,7 @@ from wazuh_testing.utils.callbacks import generate_callback
 
 @pytest.fixture
 def add_configuration(test_configuration: list[dict], request: pytest.FixtureRequest) -> None:
-    """Add configuration to the Wazuh API configuration files.
+    """Add configuration to the BOSSS XDR API configuration files.
 
     Args:
         test_configuration (dict): Configuration data to be added to the configuration files.

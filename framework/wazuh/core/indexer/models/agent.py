@@ -37,7 +37,7 @@ class Host:
 
 @dataclass
 class Agent:
-    """Representation of a Wazuh Agent."""
+    """Representation of a BOSSS XDR Agent."""
 
     id: str = None
     name: str = None

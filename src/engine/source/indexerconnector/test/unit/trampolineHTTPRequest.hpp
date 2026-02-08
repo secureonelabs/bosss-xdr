@@ -1,5 +1,5 @@
 /*
- * Wazuh Indexer Connector - Trampoline for HTTPRequest lib.
+ * BOSSS XDR Indexer Connector - Trampoline for HTTPRequest lib.
  * Copyright (C) 2015, Wazuh Inc.
  * August 30, 2024.
  *

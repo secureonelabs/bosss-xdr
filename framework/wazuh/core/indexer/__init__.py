@@ -22,7 +22,7 @@ PORT_KEY = 'port'
 
 
 class Indexer(MixinBulk):
-    """Interface to connect with Wazuh Indexer."""
+    """Interface to connect with BOSSS XDR Indexer."""
 
     def __init__(
         self,
@@ -93,12 +93,12 @@ class Indexer(MixinBulk):
         return AsyncOpenSearch(**parameters)
 
     async def connect(self) -> None:
-        """Connect to the Wazuh Indexer.
+        """Connect to the BOSSS XDR Indexer.
 
         Raises
         ------
         WazuhIndexerError(2200)
-            In case of errors communicating with the Wazuh Indexer.
+            In case of errors communicating with the BOSSS XDR Indexer.
         """
         logger.debug('Connecting to the indexer client.')
         try:
@@ -111,7 +111,7 @@ class Indexer(MixinBulk):
             raise WazuhIndexerError(2200, extra_message=f'{e}. Check your indexer configuration and SSL certificates')
 
     async def close(self) -> None:
-        """Close the Wazuh Indexer client."""
+        """Close the BOSSS XDR Indexer client."""
         logger.debug('Closing the indexer client session.')
         await self._client.close()
 
@@ -134,9 +134,9 @@ async def create_indexer(
     ports : List[int]
         Wazuh indexer nodes ports.
     user : str, optional
-        User of the Wazuh Indexer to authenticate with.
+        User of the BOSSS XDR Indexer to authenticate with.
     password : str, optional
-        Password of the Wazuh Indexer to authenticate with.
+        Password of the BOSSS XDR Indexer to authenticate with.
     ssl : IndexerSSLConfig
         SSL configuration parameters.
     retries : int, optional

@@ -18,7 +18,7 @@ logger = logging.getLogger('wazuh-api')
 
 
 async def default_info(pretty: bool = False) -> ConnexionResponse:
-    """Return basic information about the Wazuh API.
+    """Return basic information about the BOSSS XDR API.
 
     Parameters
     ----------

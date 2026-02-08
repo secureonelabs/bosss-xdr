@@ -19,7 +19,7 @@ The `setupEnvironment.py` script is used to configure the environment necessary 
 - **Python 3.8+**
 - **pip3**
 - **engine-suite**: This package includes several tools that facilitate the use of the Wazuh-Engine ecosystem, these tools are used by the tests and the user to interact with the api in a simple way.
-- **api-communication**: This package facilitates communication with the Wazuh API, crucial for some components that interact directly with the Wazuh API.
+- **api-communication**: This package facilitates communication with the BOSSS XDR API, crucial for some components that interact directly with the BOSSS XDR API.
 - **engine-test-utils** This package includes utilities used by the tests.
 
 ### Installation

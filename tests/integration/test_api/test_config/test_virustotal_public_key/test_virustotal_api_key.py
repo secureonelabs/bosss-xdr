@@ -113,7 +113,7 @@ def test_virus_total_integrations(test_configuration, test_metadata, set_wazuh_c
             brief: Apply changes to the ossec.conf configuration.
         - add_configuration:
             type: fixture
-            brief: Add configuration to the Wazuh API configuration files.
+            brief: Add configuration to the BOSSS XDR API configuration files.
         - truncate_monitored_files:
             type: fixture
             brief: Truncate all the log files and json alerts files before and after the test execution.

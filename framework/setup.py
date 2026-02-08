@@ -13,7 +13,7 @@ setup(
     description='Wazuh control with Python',
     url='https://github.com/wazuh',
     author='Wazuh',
-    author_email='hello@wazuh.com',
+    author_email='hello@secureonelabs.com',
     license='GPLv2',
     packages=find_namespace_packages(exclude=['*.tests', '*.tests.*', 'tests.*', 'tests']),
     package_data={'wazuh': ['core/wazuh.json', 'core/cluster/cluster.json', 'rbac/default/*.yaml']},

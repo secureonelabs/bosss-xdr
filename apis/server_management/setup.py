@@ -16,11 +16,11 @@ from setuptools import find_namespace_packages, setup
 setup(
     name='server_management_api',
     version='5.0.0',
-    description='Wazuh API',
-    author_email='hello@wazuh.com',
+    description='BOSSS XDR API',
+    author_email='hello@secureonelabs.com',
     author='Wazuh',
     url='https://github.com/wazuh',
-    keywords=['Wazuh API'],
+    keywords=['BOSSS XDR API'],
     install_requires=[],
     packages=find_namespace_packages(exclude=['*.test', '*.test.*', 'test.*', 'test']),
     package_data={'': ['spec/spec.yaml']},
@@ -28,6 +28,6 @@ setup(
     zip_safe=False,
     license='GPLv2',
     long_description="""\
-    The Wazuh API is an open source RESTful API that allows for interaction with the Wazuh manager from a web browser, command line tool like cURL or any script or program that can make web requests. The Wazuh app relies on this heavily and Wazuh’s goal is to accommodate complete remote management of the Wazuh infrastructure via the Wazuh app. Use the API to easily perform everyday actions like adding an agent, restarting the manager(s) or agent(s) or looking up syscheck details.
+    The BOSSS XDR API is an open source RESTful API that allows for interaction with the Wazuh manager from a web browser, command line tool like cURL or any script or program that can make web requests. The Wazuh app relies on this heavily and Wazuh’s goal is to accommodate complete remote management of the Wazuh infrastructure via the Wazuh app. Use the API to easily perform everyday actions like adding an agent, restarting the manager(s) or agent(s) or looking up syscheck details.
     """,
 )

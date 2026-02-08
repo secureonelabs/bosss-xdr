@@ -31,7 +31,7 @@ def get_login_header(user, password):
 
 
 def get_response(request_method, url, headers):
-    """Make a Wazuh API request and get its response.
+    """Make a BOSSS XDR API request and get its response.
 
     Parameters
     ----------

@@ -112,7 +112,7 @@ def test_upload_configuration(test_configuration, test_metadata, backup_wazuh_co
             brief: Save the initial wazuh configuration and restore it after the test.
         - add_configuration:
             type: fixture
-            brief: Add configuration to the Wazuh API configuration files.
+            brief: Add configuration to the BOSSS XDR API configuration files.
         - truncate_monitored_files:
             type: fixture
             brief: Truncate all the log files and json alerts files before and after the test execution.

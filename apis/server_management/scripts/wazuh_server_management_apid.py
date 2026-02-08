@@ -158,7 +158,7 @@ def configure_ssl(params: dict, config: APISSLConfig):
             raise error from exc
         else:
             msg = (
-                f'Wazuh API SSL ERROR. Please, ensure '
+                f'BOSSS XDR API SSL ERROR. Please, ensure '
                 f'if path to certificates is correct in the configuration '
                 f'file {WAZUH_SERVER_YML}'
             )
@@ -168,9 +168,9 @@ def configure_ssl(params: dict, config: APISSLConfig):
 
 
 def start(params: dict, config: ManagementAPIConfig):
-    """Run the Wazuh API.
+    """Run the BOSSS XDR API.
 
-    If another Wazuh API is running, this function will fail because uvicorn server will
+    If another BOSSS XDR API is running, this function will fail because uvicorn server will
     not be able to create server processes in the same port.
     The function creates the pool processes, the AsyncApp instance, setups the API spec.yaml,
     the middleware classes, the error_handlers, the lifespan, and runs the uvicorn ASGI server.
@@ -211,7 +211,7 @@ def start(params: dict, config: ManagementAPIConfig):
     )
     app.add_api(
         'spec.yaml',
-        arguments={'title': 'Wazuh API', 'protocol': 'https', 'host': config.host, 'port': config.port},
+        arguments={'title': 'BOSSS XDR API', 'protocol': 'https', 'host': config.host, 'port': config.port},
         strict_validation=True,
         validate_responses=False,
     )
@@ -319,7 +319,7 @@ if __name__ == '__main__':
     try:
         uvicorn_params['log_config'] = set_logging(logging_config=management_config.logging, tag=LOGGING_TAG)
     except APIError as api_log_error:
-        print(f'Error when trying to start the Wazuh API. {api_log_error}')
+        print(f'Error when trying to start the BOSSS XDR API. {api_log_error}')
         sys.exit(1)
 
     # Configure and create the wazuh-api logger
@@ -349,10 +349,10 @@ if __name__ == '__main__':
     try:
         start(uvicorn_params, config=management_config)
     except APIError as e:
-        print(f'Error when trying to start the Wazuh API. {e}')
+        print(f'Error when trying to start the BOSSS XDR API. {e}')
         sys.exit(1)
     except Exception as e:
-        print(f'Internal error when trying to start the Wazuh API. {e}')
+        print(f'Internal error when trying to start the BOSSS XDR API. {e}')
         sys.exit(1)
     finally:
         pyDaemonModule.delete_child_pids(API_MAIN_PROCESS, pid, logger)

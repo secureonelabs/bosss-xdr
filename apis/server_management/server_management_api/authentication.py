@@ -137,7 +137,7 @@ def generate_token(user_id: str = None, data: dict = None, auth_context: dict = 
 
     payload = {
         'iss': JWT_ISSUER,
-        'aud': 'Wazuh API REST',
+        'aud': 'BOSSS XDR API REST',
         'nbf': timestamp,
         'exp': timestamp + result['auth_token_exp_timeout'],
         'sub': str(user_id),
@@ -209,7 +209,7 @@ def decode_token(token: str, request: ConnexionRequest = None) -> dict:
     try:
         # Decode JWT token with local secret
         _, public_key = get_keypair()
-        payload = jwt.decode(token, public_key, algorithms=[JWT_ALGORITHM], audience='Wazuh API REST')
+        payload = jwt.decode(token, public_key, algorithms=[JWT_ALGORITHM], audience='BOSSS XDR API REST')
 
         # Check token and add processed policies
         dapi = DistributedAPI(

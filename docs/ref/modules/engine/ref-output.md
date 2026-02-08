@@ -35,7 +35,7 @@ metadata:
   versions:
     - 5.x
   author:
-    name: Wazuh, Inc.
+    name: SecureOneLabs
     date: 2022/11/08
   references:
     - ""
@@ -76,7 +76,7 @@ metadata:
   versions:
     - ""
   author:
-    name: Wazuh, Inc.
+    name: SecureOneLabs
     date: 2024/12/01
   references:
     - ""

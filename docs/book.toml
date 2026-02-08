@@ -1,6 +1,6 @@
 [book]
-title = "Wazuh Server Documentation"
-description = "Technical documentation for the Wazuh Server."
+title = "BOSSS XDR Server Documentation"
+description = "Technical documentation for the BOSSS XDR Server."
 authors = ["Facundo Dalmau"]
 multilingual = false
 src = "."

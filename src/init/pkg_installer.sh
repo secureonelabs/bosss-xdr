@@ -96,14 +96,14 @@ RESULT=$?
 echo "$(date +"%Y/%m/%d %H:%M:%S") - Installation result = ${RESULT}" >> ./logs/upgrade.log
 
 # Start Agent if not already running
-echo "$(date +"%Y/%m/%d %H:%M:%S") - Checking for Wazuh Agent control script." >> ./logs/upgrade.log
+echo "$(date +"%Y/%m/%d %H:%M:%S") - Checking for BOSSS XDR Agent control script." >> ./logs/upgrade.log
 
 if [ -f "./bin/wazuh-control" ]; then
-    echo "$(date +"%Y/%m/%d %H:%M:%S") - Checking if Wazuh Agent is running." >> ./logs/upgrade.log
+    echo "$(date +"%Y/%m/%d %H:%M:%S") - Checking if BOSSS XDR Agent is running." >> ./logs/upgrade.log
     if ./bin/wazuh-control status >/dev/null 2>&1; then
-        echo "$(date +"%Y/%m/%d %H:%M:%S") - Wazuh Agent is already running." >> ./logs/upgrade.log
+        echo "$(date +"%Y/%m/%d %H:%M:%S") - BOSSS XDR Agent is already running." >> ./logs/upgrade.log
     else
-        echo "$(date +"%Y/%m/%d %H:%M:%S") - Starting Wazuh Agent." >> ./logs/upgrade.log
+        echo "$(date +"%Y/%m/%d %H:%M:%S") - Starting BOSSS XDR Agent." >> ./logs/upgrade.log
         ./bin/wazuh-control start >> ./logs/upgrade.log 2>&1
     fi
 elif [ -f "./bin/ossec-control" ]; then

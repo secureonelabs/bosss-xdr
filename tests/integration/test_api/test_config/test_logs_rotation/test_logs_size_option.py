@@ -107,7 +107,7 @@ def test_logs_rotation_size_option_values(test_configuration, test_metadata, add
             brief: Metadata from the test case.
         - add_configuration:
             type: fixture
-            brief: Add configuration to the Wazuh API configuration files.
+            brief: Add configuration to the BOSSS XDR API configuration files.
         - truncate_monitored_files:
             type: fixture
             brief: Truncate all the log files and json alerts files before and after the test execution.

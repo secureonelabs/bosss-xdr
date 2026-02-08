@@ -9,7 +9,7 @@ type: integration
 
 brief: These tests will check if the 'drop_privileges' setting of the API is working properly.
        This setting allows the user who starts the 'wazuh-apid' daemon to be different from
-       the 'root' user. The Wazuh API is an open source 'RESTful' API that allows for interaction
+       the 'root' user. The BOSSS XDR API is an open source 'RESTful' API that allows for interaction
        with the Wazuh manager from a web browser, command line tool like 'cURL' or any script
        or program that can make web requests.
 
@@ -118,7 +118,7 @@ def test_drop_privileges(test_configuration, test_metadata, add_configuration, t
             brief: Metadata from the test case.
         - add_configuration:
             type: fixture
-            brief: Add configuration to the Wazuh API configuration files.
+            brief: Add configuration to the BOSSS XDR API configuration files.
         - truncate_monitored_files:
             type: fixture
             brief: Truncate all the log files and json alerts files before and after the test execution.

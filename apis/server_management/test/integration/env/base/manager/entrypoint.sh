@@ -50,7 +50,7 @@ if [ "$3" == "master" ]; then
 
   exit_flag=0
   [ -e /entrypoint_error ] && rm -f /entrypoint_error
-  # Wait until Wazuh API is ready
+  # Wait until BOSSS XDR API is ready
   elapsed_time=0
   while [[ $(grep -c 'Listening on' /var/ossec/logs/api.log)  -eq 0 ]] && [[ $exit_flag -eq 0 ]]
   do

@@ -1,6 +1,6 @@
-# Wazuh Server Technical Documentation
+# BOSSS XDR Server Technical Documentation
 
-This folder contains the technical documentation for the Wazuh Server. The documentation is organized into the following guides:
+This folder contains the technical documentation for the BOSSS XDR Server. The documentation is organized into the following guides:
 
 - Development Guide: Instructions for building, testing, and packaging the server.
 - Reference Manual: Detailed information on the server’s architecture, configuration, and usage.

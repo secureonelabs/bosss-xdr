@@ -8,7 +8,7 @@ copyright: Copyright (C) 2015-2024, Wazuh Inc.
 type: integration
 
 brief: These tests will check if the 'CORS' (Cross-origin resource sharing) feature of the API handled
-       by the 'wazuh-apid' daemon is working properly. The Wazuh API is an open source 'RESTful' API
+       by the 'wazuh-apid' daemon is working properly. The BOSSS XDR API is an open source 'RESTful' API
        that allows for interaction with the Wazuh manager from a web browser, command line tool
        like 'cURL' or any script or program that can make web requests.
 
@@ -117,7 +117,7 @@ def test_cors(test_configuration, test_metadata, add_configuration, truncate_mon
             brief: Metadata from the test case.
         - add_configuration:
             type: fixture
-            brief: Add configuration to the Wazuh API configuration files.
+            brief: Add configuration to the BOSSS XDR API configuration files.
         - truncate_monitored_files:
             type: fixture
             brief: Truncate all the log files and json alerts files before and after the test execution.

@@ -517,7 +517,7 @@ def load_indexer_output(engine_handler: EngineHandler) -> None:
             "versions": [""],
             "references": [""],
             "author": {
-                "name": "Wazuh, Inc.",
+                "name": "SecureOneLabs",
                 "date": "2024/12/01"
             }
         },

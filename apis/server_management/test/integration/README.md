@@ -94,7 +94,7 @@ a new file or directory is added. More information can be found at `mapping/READ
 
 ## Tests execution
 
-To perform a Wazuh API integration test, we need a specific `python3` environment. This python environment includes the 
+To perform a BOSSS XDR API integration test, we need a specific `python3` environment. This python environment includes the 
 following dependencies:
 
 ```python

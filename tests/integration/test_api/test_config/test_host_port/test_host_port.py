@@ -8,7 +8,7 @@ copyright: Copyright (C) 2015-2024, Wazuh Inc.
 type: integration
 
 brief: These tests will check that the settings related to the API host address and listening port
-       are working correctly. The Wazuh API is an open source 'RESTful' API that allows for interaction
+       are working correctly. The BOSSS XDR API is an open source 'RESTful' API that allows for interaction
        with the Wazuh manager from a web browser, command line tool like 'cURL' or any script
        or program that can make web requests.
 
@@ -96,7 +96,7 @@ def test_host_port(test_configuration, test_metadata, add_configuration, truncat
             - Restart daemons defined in `daemons_handler_configuration` in this module
             - Wait until the API is ready to receive requests (and check if the host/port is set as expected)
         - test:
-            - Check that expected host and port appear in the Wazuh API log
+            - Check that expected host and port appear in the BOSSS XDR API log
             - If the host and port are well set, make a request with the default host. Otherwise, make a request with
               the host/port defined in the test case data
         - teardown:
@@ -115,7 +115,7 @@ def test_host_port(test_configuration, test_metadata, add_configuration, truncat
             brief: Metadata from the test case.
         - add_configuration:
             type: fixture
-            brief: Add configuration to the Wazuh API configuration files.
+            brief: Add configuration to the BOSSS XDR API configuration files.
         - truncate_monitored_files:
             type: fixture
             brief: Truncate all the log files and json alerts files before and after the test execution.

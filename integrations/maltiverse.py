@@ -39,7 +39,7 @@ Add this to the ossec.conf file, inside <ossec_config></ossec_config> block:
         <alert_format>json</alert_format>
     </integration>
 
-And restart Wazuh Manager:
+And restart BOSSS XDR Manager:
 
     /etc/init.d/wazuh-manager restart
 
@@ -304,7 +304,7 @@ def process_args(args: list):
     maltiverse_api = Maltiverse(endpoint=hook_url, auth_token=api_key)
 
     # Request Maltiverse info and send event to
-    # Wazuh Manager in case of positive match
+    # BOSSS XDR Manager in case of positive match
     for msg in request_maltiverse_info(json_alert, maltiverse_api):
         send_event(msg, json_alert['agent'])
 
@@ -665,7 +665,7 @@ def request_maltiverse_info(alert: dict, maltiverse_api: Maltiverse) -> dict:
 
 
 def send_event(msg: str, agent: dict = None):
-    """Send an event to the Wazuh Manager.
+    """Send an event to the BOSSS XDR Manager.
 
     Parameters
     ----------
